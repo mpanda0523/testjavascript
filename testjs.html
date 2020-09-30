@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class = "wrapper">
+    <p id="element1"></p>
+    <a id = "button" href="testjs.html"><p class="pushtxt">push</p></a>
+  </div>
+  <script>
+    /*var msg = "panda";
+    console.log(msg);*/
+    const day_array = {'1':'Mon', '2':'Tue', '3':'Wed', '4':'Thr', '5':'Fri', '6':'Sat', '7':'Sun'};
+    var date1 = new Date();
+    const year_tmp = date1.getFullYear();
+    const month_tmp = date1.getMonth();
+    const date_tmp = date1.getDate();
+    const day_tmp = day_array[date1.getDay()];
+    date_list = [year_tmp, month_tmp, date_tmp, day_tmp];
+    for (var cnt_ind = 0; cnt_ind < 3; cnt_ind++){
+      String(date_list[cnt_ind]);
+    }
+    const date_str = date_list.join(".");
+    const hours_tmp = date1.getHours();
+    const minutes_tmp = ('00' + date1.getMinutes()).slice(-2);
+    const seconds_tmp = ('00' + date1.getSeconds()).slice(-2);
+    hours_list = [hours_tmp, minutes_tmp, seconds_tmp];
+    for (var cnt_ind = 0; cnt_ind < 2; cnt_ind++){
+      String(hours_list[cnt_ind]);
+    }
+    const hours_str = hours_list.join(".");
+    const time_full_str = date_str + "<br>" + hours_str;
+    var test1 = document.getElementById('element1');
+    test1.textContent = time_full_str;
+  </script>
+</body>
