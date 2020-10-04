@@ -5,8 +5,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class = "wrapper">
-    <p id="element1">date<br>time</p>
+  <div id = "wrapper" class = "pink">
+    <p id="element1" class = "pink">date<br>time</p>
     <a id = "button" href="testjs.html"><p class="pushtxt">push</p></a>
   </div>
   <script>
@@ -25,5 +25,8 @@
     const hours_str = hours_list.join(".");
     const time_full_str = date_str + '<br>' + hours_str;
     document.getElementById('element1').innerHTML = time_full_str;
+    test1 = document.getElementById('wrapper');
+    test1.classList.add('blue');
+    //var test = document.getElementsByClassName('wrapper');
   </script>
 </body>

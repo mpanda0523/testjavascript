@@ -11,7 +11,7 @@ html *{
 body {
   background-color: #f5f5f5;
 }
-.wrapper {
+#wrapper {
 	display: flex;
 	width: 500px;
 	height: 500px;
@@ -20,7 +20,6 @@ body {
 	border: 1px solid #4d4d4d;
   border-radius: 50%;
   margin: 50px auto;
-	background-color: #ffe2df;
 }
 #element1 {
 	color: #4d4d4d;
@@ -49,4 +48,10 @@ body {
 	margin: 0;
 	font-size: 1.0rem;
 	color: #ffffff;
+}
+.pink {
+	background-color: #ffe2df;
+}
+.blue {
+	background-color: #87ceeb;
 }
