@@ -29,7 +29,7 @@ body {
   border-radius: 5px;
 	padding: 10px;
 }
-#button {
+.btn {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -40,14 +40,11 @@ body {
 	margin-left: 15px;
 	background-color: #bbbbbb;
 	text-decoration: none;
-}
-#button:hover {
-	background-color: #dddddd;
-}
-.pushtxt {
-	margin: 0;
 	font-size: 1.0rem;
 	color: #ffffff;
+}
+.btn:hover {
+	background-color: #dddddd;
 }
 .pink {
 	background-color: #ffe2df;
