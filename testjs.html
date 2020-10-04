@@ -7,9 +7,10 @@
 <body>
   <div id = "wrapper" class = "pink">
     <p id="element1">date<br>time</p>
-    <input type = "button" value="push" class="btn">
+    <input type = "button" value="push" class="btn" onclick="ButtonClick();">
   </div>
   <script>
+  function ButtonClick() {
     const day_array = {'0':'Sun', '1':'Mon', '2':'Tue', '3':'Wed', '4':'Thr', '5':'Fri', '6':'Sat'};
     var date1 = new Date();
     const year_tmp = String(date1.getFullYear());
@@ -28,5 +29,6 @@
     test1 = document.getElementById('wrapper');
     test1.classList.add('blue');
     //var test = document.getElementsByClassName('wrapper');
+  }
   </script>
 </body>
