@@ -39,6 +39,14 @@ body {
 	background-color: #4d4d4d;
 	margin: 0 10px;
 }
+.nav-menu-item .triangle {
+	display: inline-block;
+	border-top: 8px solid #999999;
+	border-left: 8px solid transparent;
+	/*border-bottom: 10px solid #999999;*/
+	border-right: 8px solid transparent;
+	margin: 2px;
+}
 .nav-menu-item-s {
 	display: block;
 	font-size: 1.8rem;
