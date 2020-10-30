@@ -56,7 +56,10 @@ body {
 	padding: 10px;
 	border: 1px solid #999999;
 }
-#wrapper {
+.contents-nondisplay {
+	display: none;
+}
+/*#wrapper {
 	display: flex;
 	width: 500px;
 	height: 500px;
@@ -102,6 +105,10 @@ body {
 .pink {
 	background-color: #ffe2df;
 }
+*/
 .blue {
 	background-color: #87ceeb;
+}
+.contetns-display {
+	display: block;
 }

@@ -13,7 +13,7 @@
       <li class="nav-menu-item">HOME</li>
       <li class="nav-menu-item">ABOUT</li>
       <li class="nav-menu-item" id="pull-down-btn">WORKS<div class="triangle"></div>
-        <ul>
+        <ul id="pull-down-contents" class="contents-nondisplay">
           <li class="nav-menu-item-s">work1</li>
           <li class="nav-menu-item-s">work2</li>
           <li class="nav-menu-item-s">work3</li>
@@ -53,7 +53,14 @@
   </script>-->
 
   <script>
-    
+    let test = document.getElementById("pull-down-btn");
+    let test2 = document.getElementById("pull-down-contents");
+    test.addEventListener(
+      'mouseover',
+      function(){
+        test2.classList.add('contetns-display');
+      }
+      );
   </script>
   
 </body>
