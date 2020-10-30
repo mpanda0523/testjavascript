@@ -54,16 +54,13 @@ body {
 	letter-spacing: 1px;
 	text-align: center;
 	color: #4d4d4d;
-	padding: 10px;
+	padding: 10px 30px;
 	border: 1px solid #999999;
 }
 #pull-down-contents {
 	position: absolute;
 	top: 50px;
 	left: 0;
-}
-.contents-nondisplay {
-	display: none;
 }
 /*#wrapper {
 	display: flex;
@@ -115,6 +112,12 @@ body {
 .blue {
 	background-color: #87ceeb;
 }
-.contetns-display {
+.contents-display-reset {
+	display: none;
+}
+.contents-nondisplay {
+	display: none;
+}
+.contents-display {
 	display: block;
 }
