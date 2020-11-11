@@ -60,3 +60,11 @@ body {
 .blue {
 	background-color: #87ceeb;
 }
+.slider-area {
+	margin: 20px auto;
+	padding: 10px;
+}
+.slider-area .slider-img {
+	width: 500px;
+	height: 300px;
+}
