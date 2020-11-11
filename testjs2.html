@@ -28,10 +28,9 @@
   <div id="slider-area">
     <div class="slider-img">
       <img src="images/coffee.jpg" alt="panda-img">
-    </div>
-    <div class="slider-img">
       <img src="images/baby.jpg" alt="baby-img">
     </div>
+    <input class="push-btn" type="button" value="next image" onclick="nextImage()">
   </div>
 
   <!--<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="mpanda0523" data-slug-hash="NWrEYzd" data-pen-title="pull-down-menu-test">
@@ -56,6 +55,21 @@
         test2.classList.add('contents-nondisplay');
       }
     );
+
+    let slider = document.getElementById('slider-area');
+    let activeImageIndex = 0;
+    let imageArray = slider.getElementsByTagName('img');
+    imageArray[activeImageIndex].style.display = 'block';
+
+    function nextImage(){
+      imageArray[activeImageIndex].style.display = 'none';
+      if(activeImageIndex >= imageArray.length - 1){
+      activeImageIndex = 0;
+      }else{
+      activeImageIndex += 1;  
+      }
+      imageArray[activeImageIndex].style.display = 'block';
+    }
   </script>
   
 </body>
