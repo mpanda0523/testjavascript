@@ -72,3 +72,20 @@ body {
 .contents-display {
 	display: block;
 }
+#slider-area {
+	display: block;
+	margin: 20px auto;
+	padding: 10px;
+	text-align: center;
+}
+#slider-area .slider-img {
+	display: inline-block;
+	width: 300px;
+	height: 300px;
+}
+.slider-img img {
+	display: inline-block;
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+}
