@@ -30,7 +30,7 @@
       <img src="images/coffee.jpg" alt="panda-img">
       <img src="images/baby.jpg" alt="baby-img">
     </div>
-    <input class="push-btn" type="button" value="next image" onclick="nextImage()">
+    <!--<input class="push-btn" type="button" value="next image" onclick="nextImage()">-->
   </div>
 
   <!--<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="mpanda0523" data-slug-hash="NWrEYzd" data-pen-title="pull-down-menu-test">
@@ -69,7 +69,9 @@
       activeImageIndex += 1;  
       }
       imageArray[activeImageIndex].style.display = 'block';
+      imageArray[activeImageIndex].animate([{opacity: '0'}, {opacity: '1'}], 1500);
     }
+    setInterval(nextImage, 2000);
   </script>
   
 </body>

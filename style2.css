@@ -79,14 +79,14 @@ body {
 	text-align: center;
 }
 #slider-area .slider-img {
-	width: 300px;
-	height: 300px;
+	width: 500px;
+	height: 500px;
 	margin: 0 auto;
 }
 .slider-img img {
 	display: none;
-	width: 300px;
-	height: 300px;
+	width: 500px;
+	height: 500px;
 	object-fit: cover;
 }
 .push-btn {
