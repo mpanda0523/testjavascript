@@ -14,7 +14,7 @@ body {
 
 .nav-menu {
 	text-align: center;
-	margin: 100px auto;
+	margin: 50px auto;
 	padding: 10px;
 }
 .nav-menu ul {
@@ -79,13 +79,13 @@ body {
 	text-align: center;
 }
 #slider-area .slider-img {
-	width: 500px;
+	width: 900px;
 	height: 500px;
 	margin: 0 auto;
 }
 .slider-img img {
 	display: none;
-	width: 500px;
+	width: 900px;
 	height: 500px;
 	object-fit: cover;
 }
