@@ -68,6 +68,7 @@ body {
 	position: absolute;
 	top: 50px;
 	left: 0;
+	z-index: 100;
 }
 .contents-display-reset {
 	display: none;
@@ -102,6 +103,7 @@ body {
 	font-size: 1.8rem;
 	color: #ffffff;
 	transition: 0.15s;
+	z-index: 500;
 }
 .btn-r:hover {
 	background-color: #dddddd;
@@ -126,6 +128,7 @@ body {
 	font-size: 1.8rem;
 	color: #ffffff;
 	transition: 0.15s;
+	z-index: 500;
 }
 .btn-l:hover {
 	background-color: #dddddd;
@@ -148,6 +151,7 @@ body {
 	height: 500px;
 	object-fit: cover;
 	transition: 1s;
+	z-index: 0;
 }
 .push-btn {
 	margin: 50px;

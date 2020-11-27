@@ -8,41 +8,41 @@
 </head>
 
 <body>
-
-  <header class="nav-menu">
-    <ul>
-      <li class="nav-menu-item">HOME</li>
-      <li class="nav-menu-item">ABOUT</li>
-      <li class="nav-menu-item" id="pull-down-btn">WORKS<div class="triangle"></div>
-        <ul id="pull-down-contents" class="contents-display-reset">
-          <li class="nav-menu-item-s">work1</li>
-          <li class="nav-menu-item-s">work2</li>
-          <li class="nav-menu-item-s">work3</li>
-          <li class="nav-menu-item-s">work4</li>
-        </ul>
-      </li>
-      <li class="nav-menu-item">CONTACT</li>
-    </ul>
-  </header>
-  
-  <div id="slider-area">
-    <input type = "button" value=">" class="btn-r" onclick="nextImage();">
-    <div class="slider-img">
-      <img src="images/coffee.jpg" alt="panda-img">
-      <img src="images/cafe-shop.jpg" alt="baby-img">
-      <img src="images/coffee2.jpg" alt="baby-img">
+  <div class="wrapper">
+    <header class="nav-menu">
+      <ul>
+        <li class="nav-menu-item">HOME</li>
+        <li class="nav-menu-item">ABOUT</li>
+        <li class="nav-menu-item" id="pull-down-btn">WORKS<div class="triangle"></div>
+          <ul id="pull-down-contents" class="contents-display-reset">
+            <li class="nav-menu-item-s">work1</li>
+            <li class="nav-menu-item-s">work2</li>
+            <li class="nav-menu-item-s">work3</li>
+            <li class="nav-menu-item-s">work4</li>
+          </ul>
+        </li>
+        <li class="nav-menu-item">CONTACT</li>
+      </ul>
+    </header>
+    
+    <div id="slider-area">
+      <input type = "button" value=">" class="btn-r" onclick="nextImage();">
+      <div class="slider-img">
+        <img src="images/coffee.jpg" alt="panda-img">
+        <img src="images/cafe-shop.jpg" alt="baby-img">
+        <img src="images/coffee2.jpg" alt="baby-img">
+      </div>
+      <input type = "button" value=">" class="btn-r" onclick="nextImage();">
+      <input type = "button" value="<" class="btn-l" onclick="nextImage();">
+      <!--<input class="push-btn" type="button" value="next image" onclick="nextImage()">-->
     </div>
-    <input type = "button" value="<" class="btn-l" onclick="nextImage();">
-    <!--<input class="push-btn" type="button" value="next image" onclick="nextImage()">-->
   </div>
-
   <!--<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="mpanda0523" data-slug-hash="NWrEYzd" data-pen-title="pull-down-menu-test">
     <span>See the Pen <a href="https://codepen.io/mpanda0523/pen/NWrEYzd">
     pull-down-menu-test</a> by mpanda (<a href="https://codepen.io/mpanda0523">@mpanda0523</a>)
     on <a href="https://codepen.io">CodePen</a>.</span>
   </p>
   <script async src="https://static.codepen.io/assets/embed/ei.js"></script>-->
-
   <script>
     let test = document.getElementById("pull-down-btn");
     let test2 = document.getElementById("pull-down-contents");
@@ -58,24 +58,24 @@
         test2.classList.add('contents-nondisplay');
       }
     );
-
     let slider = document.getElementById('slider-area');
     let activeImageIndex = 0;
-    let imgPositionValue = -800;
+    let imgPositionOffset = -800;
     let imageArray = slider.getElementsByTagName('img');
     for (let i = 0 ; i < imageArray.length ; i++){
-      imgPositionValue += 800;
+      imgPositionValue = imgPositionOffset + i*800;
       imageArray[i].style.left = imgPositionValue + 'px';
-      }
-    /*imageArray[activeImageIndex].style.left = '0';*/
-
+    }
     function nextImage(){
-      imageArray[activeImageIndex].style.left = '0';
       activeImageIndex = (activeImageIndex + 1) % imageArray.length;
-      imageArray[activeImageIndex].style.left = '-800px';
+      for (let i = 0 ; i < imageArray.length ; i++){
+        let positionFromLeft = (activeImageIndex + i) % imageArray.length;
+        imgPositionValue = imgPositionOffset + positionFromLeft*800;
+        imageArray[i].style.left = imgPositionValue + 'px';
+        imageArray[i].style.zIndex = 100 - positionFromLeft;
+      }
       //imageArray[activeImageIndex].animate([{opacity: '0'}, {opacity: '1'}], 1500);
     }
     /*setInterval(nextImage, 2000);*/
   </script>
-  
 </body>
