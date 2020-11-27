@@ -84,6 +84,14 @@ body {
 	padding: 10px;
 	text-align: center;
 }
+.btn {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	color: #ffffff;
+	background-color:  #4d4d4d;
+	text-decoration: none;
+}
 #slider-area .slider-img {
 	width: 800px;
 	height: 500px;

@@ -26,6 +26,7 @@
   </header>
   
   <div id="slider-area">
+    <input type = "button" value="push" class="btn" onclick="nextImage();">
     <div class="slider-img">
       <img src="images/coffee.jpg" alt="panda-img">
       <img src="images/cafe-shop.jpg" alt="baby-img">
@@ -73,7 +74,7 @@
       imageArray[activeImageIndex].style.display = 'block';
       //imageArray[activeImageIndex].animate([{opacity: '0'}, {opacity: '1'}], 1500);
     }
-    setInterval(nextImage, 2000);
+    /*setInterval(nextImage, 2000);*/
   </script>
   
 </body>
