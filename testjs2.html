@@ -61,15 +61,17 @@
 
     let slider = document.getElementById('slider-area');
     let activeImageIndex = 0;
+    let imgPositionValue = -800;
     let imageArray = slider.getElementsByTagName('img');
-    /*imageArray[activeImageIndex].style.display = 'block';*/
-    imageArray[activeImageIndex].style.left = '0';
+    for (let i = 0 ; i < imageArray.length ; i++){
+      imgPositionValue += 800;
+      imageArray[i].style.left = imgPositionValue + 'px';
+      }
+    /*imageArray[activeImageIndex].style.left = '0';*/
 
     function nextImage(){
-      /*imageArray[activeImageIndex].style.display = 'none';*/
       imageArray[activeImageIndex].style.left = '0';
       activeImageIndex = (activeImageIndex + 1) % imageArray.length;
-      /*imageArray[activeImageIndex].style.display = 'block';*/
       imageArray[activeImageIndex].style.left = '-800px';
       //imageArray[activeImageIndex].animate([{opacity: '0'}, {opacity: '1'}], 1500);
     }
