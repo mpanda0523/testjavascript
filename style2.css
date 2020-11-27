@@ -80,17 +80,58 @@ body {
 }
 #slider-area {
 	display: block;
+	position: relative;
 	margin: 150px auto 100px;
 	padding: 10px;
 	text-align: center;
 }
-.btn {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	color: #ffffff;
-	background-color:  #4d4d4d;
+.btn-r {
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 55px;
+	height: 55px;
+	border: none;
+  	border-radius: 50%;
+	margin-left: 15px;
+	background-color: #bbbbbb;
 	text-decoration: none;
+	font-size: 1.8rem;
+	color: #ffffff;
+	transition: 0.15s;
+}
+.btn-r:hover {
+	background-color: #dddddd;
+}
+.btn-r:focus {
+	outline: none;
+}
+.btn-l {
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 55px;
+	height: 55px;
+	border: none;
+  	border-radius: 50%;
+	margin-left: 15px;
+	background-color: #bbbbbb;
+	text-decoration: none;
+	font-size: 1.8rem;
+	color: #ffffff;
+	transition: 0.15s;
+}
+.btn-l:hover {
+	background-color: #dddddd;
+}
+.btn-l:focus {
+	outline: none;
 }
 #slider-area .slider-img {
 	width: 800px;
