@@ -87,7 +87,7 @@ body {
 }
 .btn-r {
 	position: absolute;
-	right: 0px;
+	right: 30px;
 	top: 50%;
 	display: flex;
 	align-items: center;
@@ -111,7 +111,7 @@ body {
 }
 .btn-l {
 	position: absolute;
-	left: 0px;
+	left: 30px;
 	top: 50%;
 	display: flex;
 	align-items: center;
