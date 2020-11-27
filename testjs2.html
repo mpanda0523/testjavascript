@@ -62,18 +62,18 @@
     let slider = document.getElementById('slider-area');
     let activeImageIndex = 0;
     let imageArray = slider.getElementsByTagName('img');
-    imageArray[activeImageIndex].style.display = 'block';
+    /*imageArray[activeImageIndex].style.display = 'block';*/
+    imageArray[activeImageIndex].style.left = '0';
 
     function nextImage(){
-      imageArray[activeImageIndex].style.display = 'none';
-      // if(activeImageIndex >= imageArray.length - 1){
-      // activeImageIndex = 0;
-      // }else{
-      // activeImageIndex += 1;  
-      // }
+      /*imageArray[activeImageIndex].style.display = 'none';*/
+      imageArray[activeImageIndex].style.left = '0';
       activeImageIndex = (activeImageIndex + 1) % imageArray.length;
-      imageArray[activeImageIndex].style.display = 'block';
+      /*imageArray[activeImageIndex].style.display = 'block';*/
+      imageArray[activeImageIndex].style.left = '-800px';
       //imageArray[activeImageIndex].animate([{opacity: '0'}, {opacity: '1'}], 1500);
+      activeImageIndex = (activeImageIndex + 2) % imageArray.length;
+      imageArray[activeImageIndex].style.left = '800px';
     }
     /*setInterval(nextImage, 2000);*/
   </script>

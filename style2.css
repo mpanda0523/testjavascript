@@ -134,15 +134,20 @@ body {
 	outline: none;
 }
 #slider-area .slider-img {
+	position: relative;
 	width: 800px;
 	height: 500px;
 	margin: 0 auto;
 }
 .slider-img img {
-	display: none;
+	/*display: none;*/
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 800px;
 	height: 500px;
 	object-fit: cover;
+	transition: 1s;
 }
 .push-btn {
 	margin: 50px;
