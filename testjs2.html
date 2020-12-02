@@ -60,24 +60,34 @@
     );
     let slider = document.getElementById('slider-area');
     let activeImageIndex = 0;
-    let imgPositionOffset = -800;
+    let imgPositionOffset = -700;
     let imageArray = slider.getElementsByTagName('img');
     for (let i = 0 ; i < imageArray.length ; i++){
-      imgPositionValue = imgPositionOffset + i*800;
+      imgPositionValue = imgPositionOffset + i*700;
       imageArray[i].style.left = imgPositionValue + 'px';
     }
     function nextImage(){
-      lastImageIndex = imageArray.length - (activeImageIndex + 1);
+      //Add new image element into right-end
+      var leftEndImage = document.createElement('img');
+      var imgSrcTmp = imageArray[activeImageIndex].src;
+      var imgPositionTmp = imgPositionOffset + (imageArray.length + 1)*700;
+      leftEndImage.src = imgSrcTmp;
+      sliderImgElement = document.getElementById('slider-img');
+      sliderImgElement.appendChild(leftEndImage);
+      imageArray[imageArray.length-1].style.left = imgPositionTmp + 'px';
+      
       //console.log(activeImageIndex);
-      console.log(lastImageIndex);
       activeImageIndex = (activeImageIndex + 1) % imageArray.length;
-      imageArray[lastImageIndex].style.display = 'none';
       for (let i = 0 ; i < imageArray.length ; i++){
         let positionFromLeft = (activeImageIndex + i) % imageArray.length;
-        imgPositionValue = imgPositionOffset + positionFromLeft*800;
+        let positionFromRight = imageArray.length - positionFromLeft;
+        //imgPositionValue = imgPositionOffset + positionFromLeft*700;
+        imgPositionValue = imgPositionOffset + positionFromRight*700;
         imageArray[i].style.left = imgPositionValue + 'px';
       }
-      imageArray[lastImageIndex].style.display = 'block';
+
+      // Remove left-end image element
+      sliderImgElement.removeChild(sliderImgElement.children[0]);
       //imageArray[i].style.zIndex = 100 - positionFromLeft;
       //imageArray[activeImageIndex].animate([{opacity: '0'}, {opacity: '1'}], 1500);
     }

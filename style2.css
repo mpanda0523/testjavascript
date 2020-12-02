@@ -143,7 +143,7 @@ header {
 }
 #slider-img {
 	position: relative;
-	width: 800px;
+	width: 700px;
 	height: 500px;
 	margin: 0 auto;
 }
@@ -152,7 +152,7 @@ header {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 800px;
+	width: 700px;
 	height: 500px;
 	object-fit: cover;
 	transition: 1s;
