@@ -70,21 +70,27 @@
       //Add new image element into right-end
       var leftEndImage = document.createElement('img');
       var imgSrcTmp = imageArray[activeImageIndex].src;
-      var imgPositionTmp = imgPositionOffset + (imageArray.length + 1)*700;
+      var imgPositionTmp = imgPositionOffset + imageArray.length*700;
       leftEndImage.src = imgSrcTmp;
       sliderImgElement = document.getElementById('slider-img');
       sliderImgElement.appendChild(leftEndImage);
       imageArray[imageArray.length-1].style.left = imgPositionTmp + 'px';
-      
+      for (let i=0; i < imageArray.length; i++){
+        var positionTmp = imageArray[i].style.left;
+        var positionTmp2 = parseInt(positionTmp, 10) - 700;
+        imageArray[i].style.left = positionTmp2 + 'px';
+      }
+
       //console.log(activeImageIndex);
       activeImageIndex = (activeImageIndex + 1) % imageArray.length;
-      for (let i = 0 ; i < imageArray.length ; i++){
+
+      /*for (let i = 0 ; i < imageArray.length ; i++){
         let positionFromLeft = (activeImageIndex + i) % imageArray.length;
         let positionFromRight = imageArray.length - positionFromLeft;
         //imgPositionValue = imgPositionOffset + positionFromLeft*700;
         imgPositionValue = imgPositionOffset + positionFromRight*700;
         imageArray[i].style.left = imgPositionValue + 'px';
-      }
+      }*/
 
       // Remove left-end image element
       sliderImgElement.removeChild(sliderImgElement.children[0]);
