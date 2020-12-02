@@ -27,7 +27,7 @@
     
     <div id="slider-area">
       <input type = "button" value=">" class="btn-r" onclick="nextImage();">
-      <div class="slider-img">
+      <div id='slider-img'>
         <img src="images/coffee.jpg" alt="panda-img">
         <img src="images/cafe-shop.jpg" alt="baby-img">
         <img src="images/coffee2.jpg" alt="baby-img">
@@ -67,13 +67,18 @@
       imageArray[i].style.left = imgPositionValue + 'px';
     }
     function nextImage(){
+      lastImageIndex = imageArray.length - (activeImageIndex + 1);
+      //console.log(activeImageIndex);
+      console.log(lastImageIndex);
       activeImageIndex = (activeImageIndex + 1) % imageArray.length;
+      imageArray[lastImageIndex].style.display = 'none';
       for (let i = 0 ; i < imageArray.length ; i++){
         let positionFromLeft = (activeImageIndex + i) % imageArray.length;
         imgPositionValue = imgPositionOffset + positionFromLeft*800;
         imageArray[i].style.left = imgPositionValue + 'px';
-        imageArray[i].style.zIndex = 100 - positionFromLeft;
       }
+      imageArray[lastImageIndex].style.display = 'block';
+      //imageArray[i].style.zIndex = 100 - positionFromLeft;
       //imageArray[activeImageIndex].animate([{opacity: '0'}, {opacity: '1'}], 1500);
     }
     /*setInterval(nextImage, 2000);*/

@@ -141,13 +141,13 @@ header {
 .btn-l:focus {
 	outline: none;
 }
-#slider-area .slider-img {
+#slider-img {
 	position: relative;
 	width: 800px;
 	height: 500px;
 	margin: 0 auto;
 }
-.slider-img img {
+#slider-img img {
 	/*display: none;*/
 	position: absolute;
 	top: 0;
