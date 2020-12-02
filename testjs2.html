@@ -81,7 +81,9 @@
         var positionTmp2 = parseInt(positionTmp, 10) - 700;
         imageArray[i].style.left = positionTmp2 + 'px';
       }
-
+      
+      // Remove left-end image element
+      sliderImgElement.removeChild(sliderImgElement.children[activeImageIndex]);
       //console.log(activeImageIndex);
       activeImageIndex = (activeImageIndex + 1) % imageArray.length;
 
@@ -92,9 +94,6 @@
         imgPositionValue = imgPositionOffset + positionFromRight*700;
         imageArray[i].style.left = imgPositionValue + 'px';
       }*/
-
-      // Remove left-end image element
-      sliderImgElement.removeChild(sliderImgElement.children[0]);
       //imageArray[i].style.zIndex = 100 - positionFromLeft;
       //imageArray[activeImageIndex].animate([{opacity: '0'}, {opacity: '1'}], 1500);
     }
