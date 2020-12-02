@@ -68,7 +68,6 @@ body {
 	position: absolute;
 	top: 50px;
 	left: 0;
-	z-index: 100;
 }
 .contents-display-reset {
 	display: none;
@@ -103,7 +102,7 @@ body {
 	font-size: 1.8rem;
 	color: #ffffff;
 	transition: 0.15s;
-	z-index: 500;
+	z-index: 100;
 }
 .btn-r:hover {
 	background-color: #dddddd;
@@ -128,7 +127,7 @@ body {
 	font-size: 1.8rem;
 	color: #ffffff;
 	transition: 0.15s;
-	z-index: 500;
+	z-index: 100;
 }
 .btn-l:hover {
 	background-color: #dddddd;
