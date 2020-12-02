@@ -66,15 +66,16 @@
       imgPositionValue = imgPositionOffset + i*700;
       imageArray[i].style.left = imgPositionValue + 'px';
     }
+    
+    var leftEndImage = document.createElement('img');
+    var imgPositionRightEnd = imgPositionOffset + imageArray.length*700;
     function nextImage(){
       //Add new image element into right-end
-      var leftEndImage = document.createElement('img');
       var imgSrcTmp = imageArray[activeImageIndex].src;
-      var imgPositionTmp = imgPositionOffset + imageArray.length*700;
       leftEndImage.src = imgSrcTmp;
       sliderImgElement = document.getElementById('slider-img');
       sliderImgElement.appendChild(leftEndImage);
-      imageArray[imageArray.length-1].style.left = imgPositionTmp + 'px';
+      imageArray[imageArray.length-1].style.left = imgPositionRightEnd + 'px';
       for (let i=0; i < imageArray.length; i++){
         var positionTmp = imageArray[i].style.left;
         var positionTmp2 = parseInt(positionTmp, 10) - 700;
