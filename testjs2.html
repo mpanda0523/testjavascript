@@ -72,14 +72,17 @@
       var leftEndImage = document.createElement('img');
       var imgPositionRightEnd = imgPositionOffset + imageArray.length*700;
       var imgSrcTmp = imageArray[activeImageIndex].src;
-      leftEndImage.src = imgSrcTmp;
+      var splittedImgSrc = imgSrcTmp.split('/');
+      var imgIndex = splittedImgSrc.length - 1;
+      leftEndImage.src = "images/" + splittedImgSrc[imgIndex];
       sliderImgElement = document.getElementById('slider-img');
       sliderImgElement.appendChild(leftEndImage);
       imageArray[imageArray.length-1].style.left = imgPositionRightEnd + 'px';
-      for (let i=0; i < imageArray.length-1; i++){
+      for (let i=0; i<imageArray.length; i++){
         var positionTmp = imageArray[i].style.left;
         var positionTmp2 = parseInt(positionTmp, 10) - 700;
         imageArray[i].style.left = positionTmp2 + 'px';
+        //console.log(i);
       }
       
       // Remove left-end image element
