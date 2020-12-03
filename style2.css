@@ -146,6 +146,7 @@ header {
 	width: 700px;
 	height: 500px;
 	margin: 0 auto;
+	overflow: hidden;
 }
 #slider-img img {
 	/*display: none;*/
@@ -158,7 +159,7 @@ header {
 	transition: 1s;
 	z-index: 0;
 	padding: 10px;
-	border-radius: 20px;
+	border-radius: 50px;
 }
 .push-btn {
 	margin: 50px;
