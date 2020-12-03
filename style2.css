@@ -157,6 +157,8 @@ header {
 	object-fit: cover;
 	transition: 1s;
 	z-index: 0;
+	padding: 10px;
+	border-radius: 20px;
 }
 .push-btn {
 	margin: 50px;
