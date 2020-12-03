@@ -28,9 +28,9 @@
     <div id="slider-area">
       <input type = "button" value=">" class="btn-r" onclick="nextImage();">
       <div id='slider-img'>
-        <img src="images/coffee.jpg" alt="panda-img">
-        <img src="images/cafe-shop.jpg" alt="baby-img">
-        <img src="images/coffee2.jpg" alt="baby-img">
+        <img src="images/coffee.jpg" alt="coffee-img">
+        <img src="images/cafe-shop.jpg" alt="cafe-img">
+        <img src="images/coffee2.jpg" alt="coffee-img">
       </div>
       <input type = "button" value=">" class="btn-r" onclick="nextImage();">
       <input type = "button" value="<" class="btn-l" onclick="nextImage();">
@@ -69,15 +69,15 @@
     
     function nextImage(){
       //Add new image element into right-end
-      var leftEndImage = document.createElement('img');
-      var imgPositionRightEnd = imgPositionOffset + imageArray.length*700;
-      var imgSrcTmp = imageArray[activeImageIndex].src;
+      var rightEndImage = document.createElement('img');
+      const imgPositionRightEnd = imgPositionOffset + imageArray.length*700;
+      var imgSrcTmp = imageArray[0].src;
       var splittedImgSrc = imgSrcTmp.split('/');
       var imgIndex = splittedImgSrc.length - 1;
-      leftEndImage.src = "images/" + splittedImgSrc[imgIndex];
+      rightEndImage.src = "images/" + splittedImgSrc[imgIndex];
+      rightEndImage.style.left = imgPositionRightEnd + 'px';
       sliderImgElement = document.getElementById('slider-img');
-      sliderImgElement.appendChild(leftEndImage);
-      imageArray[imageArray.length-1].style.left = imgPositionRightEnd + 'px';
+      sliderImgElement.appendChild(rightEndImage);
       for (let i=0; i<imageArray.length; i++){
         var positionTmp = imageArray[i].style.left;
         var positionTmp2 = parseInt(positionTmp, 10) - 700;
