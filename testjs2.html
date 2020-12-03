@@ -43,6 +43,7 @@
   </p>
   <script async src="https://static.codepen.io/assets/embed/ei.js"></script>-->
   <script>
+
     let test = document.getElementById("pull-down-btn");
     let test2 = document.getElementById("pull-down-contents");
     test.addEventListener('mouseover',
@@ -57,6 +58,8 @@
         test2.classList.add('contents-nondisplay');
       }
     );
+
+
     let slider = document.getElementById('slider-area');
     let activeImageIndex = 0;
     let imgPositionOffset = -700;
@@ -65,7 +68,6 @@
       imgPositionValue = imgPositionOffset + i*700;
       imageArray[i].style.left = imgPositionValue + 'px';
     }
-    
     function nextImageLeft(){
       //Add new image element to the right-end
       var rightEndImage = document.createElement('img');
