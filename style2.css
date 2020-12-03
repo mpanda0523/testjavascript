@@ -146,7 +146,7 @@ header {
 	width: 700px;
 	height: 500px;
 	margin: 0 auto;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 #slider-img img {
 	/*display: none;*/
