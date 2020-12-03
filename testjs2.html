@@ -26,14 +26,13 @@
     </header>
     
     <div id="slider-area">
-      <input type = "button" value=">" class="btn-r" onclick="nextImage();">
       <div id='slider-img'>
         <img src="images/coffee.jpg" alt="coffee-img">
         <img src="images/cafe-shop.jpg" alt="cafe-img">
         <img src="images/coffee2.jpg" alt="coffee-img">
       </div>
-      <input type = "button" value=">" class="btn-r" onclick="nextImage();">
-      <input type = "button" value="<" class="btn-l" onclick="nextImage();">
+      <input type = "button" value=">" class="btn-r" onclick="nextImageLeft();">
+      <input type = "button" value="<" class="btn-l" onclick="nextImageLeft();">
       <!--<input class="push-btn" type="button" value="next image" onclick="nextImage()">-->
     </div>
   </div>
@@ -67,8 +66,8 @@
       imageArray[i].style.left = imgPositionValue + 'px';
     }
     
-    function nextImage(){
-      //Add new image element into right-end
+    function nextImageLeft(){
+      //Add new image element to the right-end
       var rightEndImage = document.createElement('img');
       const imgPositionRightEnd = imgPositionOffset + imageArray.length*700;
       var imgSrcTmp = imageArray[0].src;
@@ -85,7 +84,7 @@
         imageArray[i].style.left = positionTmp2 + 'px';
         //console.log(positionTmp2);
       }
-      // Remove left-end image element
+      // Remove the left-end image element
       sliderImgElement.removeChild(sliderImgElement.children[0]);
       //console.log(activeImageIndex);
       activeImageIndex = (activeImageIndex + 1) % imageArray.length;
@@ -99,6 +98,28 @@
       //imageArray[i].style.zIndex = 100 - positionFromLeft;
       //imageArray[activeImageIndex].animate([{opacity: '0'}, {opacity: '1'}], 1500);
     }
+    /*function nextImageRight(){
+      //Add new image element to the right-end
+      var leftEndImage = document.createElement('img');
+      const imgPositionLeftEnd = imgPositionOffset - 700;
+      var imgSrcTmp = imageArray[0].src;
+      var splittedImgSrc = imgSrcTmp.split('/');
+      var imgIndex = splittedImgSrc.length - 1;
+      leftEndImage.src = "images/" + splittedImgSrc[imgIndex];
+      leftEndImage.style.left = imgPositionLeftEnd + 'px';
+      sliderImgElement = document.getElementById('slider-img');
+      sliderImgElement.prepend(leftEndImage);
+      // Slide all the images to the left
+      for (let i=0; i<imageArray.length; i++){
+        var positionTmp = imageArray[i].style.left;
+        var positionTmp2 = parseInt(positionTmp, 10) + 700;
+        imageArray[i].style.left = positionTmp2 + 'px';
+      }
+      // Remove the left-end image element
+      sliderImgElement.removeChild(sliderImgElement.children[imageArray.length-1]);
+      //console.log(activeImageIndex);
+      activeImageIndex = (activeImageIndex + 1) % imageArray.length;
+    }*/
     /*setInterval(nextImage, 2000);*/
   </script>
 </body>
