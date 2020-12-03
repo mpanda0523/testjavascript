@@ -78,18 +78,17 @@
       rightEndImage.style.left = imgPositionRightEnd + 'px';
       sliderImgElement = document.getElementById('slider-img');
       sliderImgElement.appendChild(rightEndImage);
+      // Slide all the images to the left
       for (let i=0; i<imageArray.length; i++){
         var positionTmp = imageArray[i].style.left;
         var positionTmp2 = parseInt(positionTmp, 10) - 700;
         imageArray[i].style.left = positionTmp2 + 'px';
         //console.log(i);
       }
-      
       // Remove left-end image element
-      sliderImgElement.removeChild(sliderImgElement.children[activeImageIndex]);
+      sliderImgElement.removeChild(sliderImgElement.children[0]);
       //console.log(activeImageIndex);
       activeImageIndex = (activeImageIndex + 1) % imageArray.length;
-
       /*for (let i = 0 ; i < imageArray.length ; i++){
         let positionFromLeft = (activeImageIndex + i) % imageArray.length;
         let positionFromRight = imageArray.length - positionFromLeft;
