@@ -1,3 +1,3 @@
 # testjavascript
 
-JavaScript練習用リポジトル
+JavaScript練習用リポジトリ
