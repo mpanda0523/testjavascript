@@ -63,7 +63,7 @@
     let slider = document.getElementById('slider-area');
     let activeImageIndex = 0;
     let imgPositionOffset = -700;
-    let imageArray = slider.getElementsByTagName('img');
+    let imageArray = slider.getElementsByTagName('img'); // 参照をかえしているので、こいつを書き換えると元のelementが書き換わる
     for (let i = 0 ; i < imageArray.length ; i++){
       imgPositionValue = imgPositionOffset + i*700;
       imageArray[i].style.left = imgPositionValue + 'px';
