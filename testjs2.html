@@ -102,8 +102,10 @@
           //console.log(positionTmp2);
         }
         // Remove the left-end image element
-        sliderImgElement.removeChild(sliderImgElement.children[0]);
+        setTimeout(()=>{
+          sliderImgElement.removeChild(sliderImgElement.children[0]);
         //console.log(activeImageIndex);
+        }, 1000)
         activeImageIndex = (activeImageIndex + 1) % imageArray.length;
         /*for (let i = 0 ; i < imageArray.length ; i++){
           let positionFromLeft = (activeImageIndex + i) % imageArray.length;
